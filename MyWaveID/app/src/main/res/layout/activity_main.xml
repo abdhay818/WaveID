@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.abdhay.mywaveid.MainActivity">
+    android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Generate WaveID"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="288dp" />
+        android:src="@drawable/sound_wave2"
+        android:visibility="invisible" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/generateWave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate WaveID"
+        android:onClick="onGenerateWave()"/>
+
+    <Button
+        android:id="@+id/generateQrCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate QR Code"
+        android:visibility="invisible"
+        android:onClick="onQrCode()"/>
+
+    <ImageView
+        android:id="@+id/imageQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qr_codes"
+        android:visibility="invisible" />
+
+</LinearLayout>
+
+
+
